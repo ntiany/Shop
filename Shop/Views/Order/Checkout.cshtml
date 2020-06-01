@@ -1,0 +1,47 @@
+﻿@model Order
+
+<form asp-action="Checkout" method="post">
+    <h4>All these items can be yours soon</h4>
+    
+    <div asp-validation-summary="All"></div>
+    
+    <div>
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName"/>
+    </div>
+    <div>
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName"/>
+    </div>
+    <div>
+        <label asp-for="AddressLine1"></label>
+        <input asp-for="AddressLine1"/>
+    </div>
+    <div>
+        <label asp-for="AddressLine2"></label>
+        <input asp-for="AddressLine2"/>
+    </div>
+    <div>
+        <label asp-for="City"></label>
+        <input asp-for="City"/>
+    </div>
+    <div>
+        <label asp-for="ZipCode"></label>
+        <input asp-for="ZipCode"/>
+    </div>
+    <div>
+        <label asp-for="Country"></label>
+        <input asp-for="Country"/>
+    </div>
+    <div>
+        <label asp-for="PhoneNumber"></label>
+        <input asp-for="PhoneNumber"/>
+    </div>
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email"/>
+    </div>
+    <div>
+        <input type="submit" value="Complete"/>
+    </div>
+</form>

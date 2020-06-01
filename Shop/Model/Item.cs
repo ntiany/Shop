@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Shop.Model
+{
+    public class Item
+    {
+        public int ItemId { get; set; }
+
+        public string Name { get; set; }
+
+        public string ShortDescription { get; set; }
+
+        public string LongDescription { get; set; }
+
+        public decimal Price { get; set; }
+
+        public string ImageUrl { get; set; }
+
+        public bool InStock { get; set; }
+
+        public bool Popular { get; set; }
+
+        public int CategoryId { get; set; }
+
+        public Category Category { get; set; }
+    }
+}

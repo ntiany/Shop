@@ -1,0 +1,35 @@
+﻿@model ShoppingCartViewModel
+
+<h2>Your shopping cart</h2>
+<h4>Take these items to your next adventure!</h4>
+
+<div>
+    Item
+</div>
+<div>
+    Price
+</div>
+<div>
+    Amount
+</div>
+
+@foreach (var item in Model.ShoppingCart.ShoppingCartItems)
+{
+    <div>
+        @item.Item.Name
+    </div>
+    <div>
+        @item.Item.Price
+    </div>
+    <div>
+        @item.Amount
+    </div>
+}
+
+<div>
+    Total: @Model.ShoppingCart.GetShoppingCartTotal()
+</div>
+
+<div>
+    <a asp-controller="Order" asp-action="Checkout">Checkout</a>
+</div>

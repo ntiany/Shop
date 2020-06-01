@@ -1,0 +1,7 @@
+﻿@model ItemListViewModel
+
+
+@foreach (var item in Model.Items)
+{
+<partial name="_Item" model="item"/>
+}

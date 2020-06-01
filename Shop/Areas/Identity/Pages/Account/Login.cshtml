@@ -1,0 +1,49 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+    <div class="box">
+        <h1 class="blue">@ViewData["Title"]</h1>
+        <section>
+            <form id="account" method="post">
+                <div asp-validation-summary="All" class="text-alert box-alert"></div>
+                <div class="form-group">
+                    <label asp-for="Input.Email" class="label-item"></label>
+                    <input asp-for="Input.Email" class="input-item" />
+                    <span asp-validation-for="Input.Email" class="text-alert"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Input.Password" class="label-item"></label>
+                    <input asp-for="Input.Password" class="input-item" />
+                    <span asp-validation-for="Input.Password" class="text-alert"></span>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label asp-for="Input.RememberMe" class="gray">
+                            <input asp-for="Input.RememberMe"/>
+                            @Html.DisplayNameFor(m => m.Input.RememberMe)
+                        </label>
+                    </div>
+                </div>
+                <div class="box-alert">
+                    <div class="block">
+                        <a class="text-redirect block" id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
+                    </div>
+                    <div class="block">
+                        <a class="text-redirect block" asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+                    </div>
+                </div>
+                    <div class="center-inside">
+                        <button type="submit" class="blue-btn small-margin-top">Log in</button>
+                    </div>
+                    <div>
+                    </div>
+</form>
+            </section>
+    </div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
